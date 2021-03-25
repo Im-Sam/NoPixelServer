@@ -1,15 +1,20 @@
 local menuOpen = false
 local setDate = 0
-
+local spawnAlreadyInit = false
 
 local function sendMessage(data)
     SendNUIMessage(data)
 end
 
 local function openMenu()
+    if spawnAlreadyInit then
+        return
+    end
     menuOpen = true
     sendMessage({open = true})
     SetNuiFocus(true, true)
+    print("NUI FOCUS TRUE")
+    print("this is open menu")
     TriggerEvent("resetinhouse")
     TriggerEvent("loading:disableLoading")
     Citizen.CreateThread(function()
@@ -21,6 +26,7 @@ local function openMenu()
             
         end
     end)
+    spawnAlreadyInit = true
 end
 
 local function closeMenu()
@@ -28,6 +34,8 @@ local function closeMenu()
     EnableAllControlActions(0)
     TaskSetBlockingOfNonTemporaryEvents(PlayerPedId(), false)
     SetNuiFocus(false, false)
+    print("NUI FOCUS FALSE ")
+    print("this is close menu")
 end
 
 local function disconnect()
@@ -40,10 +48,12 @@ local function nuiCallBack(data)
 
     if data.close then closeMenu() end
     if data.disconnect then disconnect() end
-    if data.showcursor or data.showcursor == false then SetNuiFocus(true, data.showcursor) end
+    --if data.showcursor or data.showcursor == false then SetNuiFocus(true, data.showcursor) end
     if data.setcursorloc then SetCursorLocation(data.setcursorloc.x, data.setcursorloc.y) end
     
     if data.fetchdata then
+        print("NUI FOCUS TRUE")
+        print("fetchdata")
         events:Trigger("np-base:loginPlayer", nil, function(data)
             if type(data) == "table" and data.err then
                 sendMessage({err = data})
@@ -52,9 +62,12 @@ local function nuiCallBack(data)
 
             sendMessage({playerdata = data})
         end)
+        if data.showcursor or data.showcursor == false then SetNuiFocus(true, data.showcursor) end
     end
 
     if data.newchar then
+        print("NUI FOCUS TRUE")
+        print("newchar")
         if not data.chardata then return end
 
         events:Trigger("np-base:createCharacter", data.chardata, function(created)
@@ -78,6 +91,8 @@ local function nuiCallBack(data)
     end
 
     if data.fetchcharacters then
+        print("NUI FOCUS TRUE")
+        print("fetchchar")
         events:Trigger("np-base:fetchPlayerCharacters", nil, function(data)
             if data.err then
                 sendMessage({err = data})
@@ -96,6 +111,8 @@ local function nuiCallBack(data)
     end
 
     if data.deletecharacter then
+        print("NUI FOCUS TRUE")
+        print("delete")
         if not data.deletecharacter then return end
 
         events:Trigger("np-base:deleteCharacter", data.deletecharacter, function(deleted)
@@ -104,6 +121,8 @@ local function nuiCallBack(data)
     end
 
     if data.selectcharacter then
+        print("NUI FOCUS TRUE")
+        print("selectchar")
         events:Trigger("np-base:selectCharacter", data.selectcharacter, function(data)
            
             if not data.loggedin or not data.chardata then sendMessage({err = {err = true, msg = "There was a problem logging in as that character, if the problem persists, contact an administrator <br/> Cid: " .. tostring(data.selectcharacter)}}) return end
@@ -118,6 +137,7 @@ local function nuiCallBack(data)
             SetPlayerInvincible(PlayerPedId(), true)
 
             TriggerEvent("np-base:firstSpawn")
+            print("closing menu now")
             closeMenu()
             Citizen.Wait(5000)
             TriggerEvent("Relog")

@@ -43,6 +43,7 @@ local vehshopDefault = {
 			name = "main",
 			buttons = {
 				{name = "Vehicles", description = ""},
+				{name = "Motorcycles", description = ""},
 				{name = "Cycles", description = ""},
 			}
 		},
@@ -51,6 +52,16 @@ local vehshopDefault = {
 			name = "vehicles",
 			buttons = {
 				{name = "Job Vehicles", description = ''},
+				{name = "Compacts", description = ''},
+				{name = "Coupes", description = ''},
+				{name = "Sedans", description = ''},
+				{name = "Sports", description = ''},
+				{name = "Sports Classics", description = ''},
+				{name = "Super", description = '', rank = 5},
+				{name = "Muscle", description = ''},
+				{name = "Off-Road", description = ''},
+				{name = "SUVs", description = ''},
+				{name = "Vans", description = ''},
 			}
 		},
 		["jobvehicles"] = {
@@ -58,9 +69,379 @@ local vehshopDefault = {
 			name = "job vehicles",
 			buttons = {
 				{name = "Taxi Cab", costs = 4000, description = {}, model = "taxi"},
-				{name = "Flat Bed", costs = 4000, description = {}, model = "flatbed"},
+		--		{name = "Flat Bed", costs = 4000, description = {}, model = "flatbed"},
+		--		{name = "Flat Bed Deluxe", costs = 52000, description = {}, model = "flatbed3"},
 				{name = "News Rumpo", costs = 4000, description = {}, model = "rumpo"},
-				{name = "Food Truck New", costs = 4000, description = {}, model = "taco"},
+			}
+		},
+		["compacts"] = {
+			title = "compacts",
+			name = "compacts",
+			buttons = {			
+				{name = "Blista", costs = 12000, description = {}, model = "blista"},
+				{name = "Brioso R/A", costs = 22000, description = {}, model = "brioso"},
+				{name = "Dilettante", costs = 7000, description = {}, model = "Dilettante"},
+				{name = "Issi", costs = 14000, description = {}, model = "issi2"},
+				{name = "Panto", costs = 8000, description = {}, model = "panto"},
+				{name = "Prairie", costs = 8000, description = {}, model = "prairie"},
+				{name = "Rhapsody", costs = 6000, description = {}, model = "rhapsody"},
+
+				--GTAWiseGuy
+				{name = "Issi Classic", costs = 60000, description = {}, model = "issi3"},
+				{name = "Futo", costs = 25000, description = {}, model = "Futo"},
+			}
+		},
+		["coupes"] = {
+			title = "coupes",
+			name = "coupes",
+			buttons = {
+				{name = "Cognoscenti Cabrio", costs = 180000, description = {}, model = "cogcabrio"},
+				{name = "Exemplar", costs = 70000, description = {}, model = "exemplar"},
+				{name = "F620", costs = 80000, description = {}, model = "f620"},
+				{name = "Felon", costs = 40000, description = {}, model = "felon"},
+				{name = "Felon GT", costs = 45000, description = {}, model = "felon2"},
+				{name = "Jackal", costs = 36000, description = {}, model = "jackal"},
+				{name = "Oracle", costs = 17000, description = {}, model = "oracle"},
+				{name = "Oracle XS", costs = 18000, description = {}, model = "oracle2"},
+				{name = "Sentinel", costs = 15000, description = {}, model = "sentinel"},
+				{name = "Sentinel XS", costs = 17000, description = {}, model = "sentinel2"},
+				{name = "Windsor", costs = 140000, description = {}, model = "windsor"},
+				{name = "Windsor Drop", costs = 150000, description = {}, model = "windsor2"},
+				{name = "Zion", costs = 6000, description = {}, model = "zion"},
+				{name = "Zion Cabrio", costs = 12000, description = {}, model = "zion2"},
+			}
+		},
+		["sports"] = {
+			title = "sports",
+			name = "sports",
+			buttons = {
+				{name = "9F", costs = 200000, description = {}, model = "ninef"},
+				{name = "9F Cabrio", costs = 210000, description = {}, model = "ninef2"},
+				{name = "Alpha", costs = 11000, description = {}, model = "alpha"},
+				{name = "Banshee", costs = 140000, description = {}, model = "banshee"},
+				{name = "Bestia GTS", costs = 160000, description = {}, model = "bestiagts"},
+
+				{name = "Buffalo", costs = 15000, description = {}, model = "buffalo"},
+				{name = "Buffalo S", costs = 19000, description = {}, model = "buffalo2"},
+				{name = "Carbonizzare", costs = 225000, description = {}, model = "carbonizzare"},
+				{name = "Comet", costs = 190000, description = {}, model = "comet2"},
+				{name = "Coquette", costs = 138000, description = {}, model = "coquette"},
+				{name = "Drift Tampa", costs = 250000, description = {}, model = "tampa2"},
+				{name = "Feltzer", costs = 60000, description = {}, model = "feltzer2"},
+				{name = "Furore GT", costs = 44800, description = {}, model = "furoregt"},
+				{name = "Fusilade", costs = 15000, description = {}, model = "fusilade"},
+				{name = "Jester", costs = 230000, description = {}, model = "jester"},
+				{name = "Kuruma", costs = 95000, description = {}, model = "kuruma"},
+				{name = "Lynx", costs = 135000, description = {}, model = "lynx"},
+				{name = "Massacro", costs = 165000, description = {}, model = "massacro"},
+				{name = "Omnis", costs = 121000, description = {}, model = "omnis"},
+				{name = "Penumbra", costs = 9000, description = {}, model = "penumbra"},
+				{name = "Rapid GT", costs = 45000, description = {}, model = "rapidgt"},
+				{name = "Rapid GT Convertible", costs = 50000, description = {}, model = "rapidgt2"},
+				{name = "Schafter V12", costs = 50000, description = {}, model = "schafter3"},
+				{name = "Sultan", costs = 70000, description = {}, model = "sultan"},
+				{name = "Surano", costs = 110000, description = {}, model = "surano"},
+				{name = "Tropos", costs = 276000, description = {}, model = "tropos"},
+				{name = "Verkierer", costs = 195000, description = {}, model = "verlierer2"},
+				{name = "Neon", costs = 210000, description = {}, model = "npneon"}, -- doomsday Heist , handling done
+				{name = "Comet SR", costs = 270000, description = {}, model = "comet5"}, -- doomsday Heist , handling done
+				{name = "Sentinel Classic", costs = 80000, description = {}, model = "sentinel3"}, -- doomsday Heist , handling done
+				{name = "Revolter", costs = 90000, description = {}, model = "revolter"}, -- doomsday Heist , handling done
+				{name = "Streiter", costs = 230000, description = {}, model = "streiter"}, -- doomsday Heist , handling done
+				{name = "Comet Safari", costs = 250000, description = {}, model = "comet4"}, -- doomsday Heist , handling done
+				{name = "Pariah", costs = 180000, description = {}, model = "pariah"}, -- doomsday Heist , handling done
+				{name = "Raiden", costs = 220000, description = {}, model = "raiden"}, -- doomsday Heist , handling done
+
+				-- GTAWiseGuy
+				{name = "Sentinel SG4", costs = 150000, description = {}, model = "sentinelsg4"},
+				{name = "Elegy RH8", costs = 150000, description = {}, model = "elegy2"},
+				--imports 
+				{name = "Lamborghini Aventador LP700R", costs = 400000, description = {}, model = "lp700r"},
+                {name = "Porsche 911 Turbo S", costs = 325000, description = {}, model = "911turbos"},
+                {name = "Mazda RX7 RB", costs = 275000, description = {}, model = "rx7rb"},
+                {name = "Subaru Impreza WRX", costs = 250000, description = {}, model = "subwrx"},
+                {name = "Subaru WRX", costs = 240000, description = {}, model = "ff4wrx"},
+                {name = "Ford Mustang RMod", costs = 375000, description = {}, model = "rmodmustang"},
+                {name = "Honda Civic EG", costs = 250000, description = {}, model = "delsoleg"},
+                {name = "Nissan Skyline R34 GTR", costs = 325000, description = {}, model = "fnf4r34"},
+                {name = "Honda S2000", costs = 275000, description = {}, model = "ap2"},
+				{name = "Mitsubishi Lancer Evolution X MR FQ-400", costs = 275000, description = {}, model = "evo10"},
+				
+				-- pack 2
+				
+                {name = "BMW i8", costs = 300000, description = {}, model = "acs8"},
+                {name = "Datsun 510", costs = 325000, description = {}, model = "510"},
+
+                -- pack 3
+
+                {name = "Nissan GTR R35 LW", costs = 350000, description = {}, model = "LWGTR"},
+                {name = "Toyota Supra Mk.IV", costs = 335000, description = {}, model = "a80"},
+                {name = "Nissan 370Z", costs = 300000, description = {}, model = "370Z"},
+                {name = "1966 Ford Mustang", costs = 275000, description = {}, model = "66fastback"},
+                {name = "BMW M3 E46", costs = 250000, description = {}, model = "E46"},
+
+				-- GTA Wise Guy new vehicles pack 1
+				
+                {name = "Mazda MX5 NA", costs = 200000, description = {}, model = "na6"},
+                {name = "2019 Ford Mustang", costs = 350000, description = {}, model = "mustang19"},
+                {name = "Yamaha R1", costs = 250000, description = {}, model = "r1"},
+                {name = "Audi RS6", costs = 325000, description = {}, model = "audirs6tk"},
+                {name = "Mercedes AMG GT63", costs = 375000, description = {}, model = "gt63"},
+                {name = "1969 Dodge Charger", costs = 300000, description = {}, model = "69charger"},
+                {name = "Corvette C7", costs = 350000, description = {}, model = "c7"},
+				{name = "McLaren 650S LW", costs = 650000, description = {}, model = "650slw"},
+
+				-- GTA Wise Guy new vehicles pack 2
+
+				-- {name = "S14 RB Boss", costs = 650000, description = {}, model = "s14boss"},
+				{name = "Mazda RX7 FD3S", costs = 275000, description = {}, model = "fnfrx7"},
+				{name = "Nissan Silvia S15", costs = 300000, description = {}, model = "s15rb"},
+				{name = "Honda Civic Type-R FK8", costs = 300000, description = {}, model = "fk8"},
+				{name = "Ford Focus RS", costs = 285000, description = {}, model = "focusrs"},
+				{name = "Ford Raptor F150", costs = 250000, description = {}, model = "f150"},
+				{name = "Jeep Grand Cherokee SRT8", costs = 325000, description = {}, model = "srt8b"},
+				{name = "Porsche Panamera Turbo", costs = 375000, description = {}, model = "panamera17turbo"},
+				{name = "Camaro ZL1", costs = 350000, description = {}, model = "exor"},
+				{name = "Porsche 911 GT3RS", costs = 390000, description = {}, model = "gt3rs"},
+				-- {name = "Lamborghini Murcielago LP670", costs = 450000, description = {}, model = "lp670"},
+				-- {name = "Schwartzer, costs = 80000, description = {}, model = "schwarzer"},
+			}
+		},
+		["sportsclassics"] = {
+			title = "sports classics",
+			name = "sportsclassics",
+			buttons = {
+				{name = "Casco", costs = 280000, description = {}, model = "casco"},
+				{name = "Coquette Classic", costs = 65000, description = {}, model = "coquette2"},
+				{name = "JB 700", costs = 290000, description = {}, model = "jb700"},
+				{name = "Pigalle", costs = 9000, description = {}, model = "pigalle"},
+				{name = "Stinger", costs = 210000, description = {}, model = "stinger"},
+				{name = "Stinger GT", costs = 275000, description = {}, model = "stingergt"},
+				{name = "Stirling GT", costs = 275000, description = {}, model = "feltzer3"},
+
+				{name = "Rapid GT Classic", costs = 100000, description = {}, model = "rapidgt3"}, -- smugglers run , handling done
+				{name = "Retinue", costs = 110000, description = {}, model = "retinue"}, -- smugglers run , handling done
+				{name = "Viseris", costs = 110000, description = {}, model = "viseris"}, -- doomsday Heist , handling done 
+				{name = "190z", costs = 90000, description = {}, model = "z190"}, -- doomsday Heist , handling done
+				{name = "GT500", costs = 120000, description = {}, model = "gt500"}, -- doomsday Heist , handling done
+				{name = "Savestra", costs = 110000, description = {}, model = "savestra"}, -- doomsday Heist , handling done
+
+				-- GTAWiseGuy
+				{name = "Cheburek", costs = 30000, description = {}, model = "Cheburek"}, 
+				{name = "Tornado Lowrider", costs = 40000, description = {}, model = "tornado5"}, 
+				{name = "Buccaneer Lowrider", costs = 45000, description = {}, model = "buccaneer2"},
+				{name = "Voodoo Lowrider", costs = 50000, description = {}, model = "voodoo"},
+				{name = "Chino Lowrider", costs = 45000, description = {}, model = "chino2"},
+				{name = "Moonbeam Lowrider", costs = 60000, description = {}, model = "moonbeam2"},
+				-- {name = "Sabre GT Lowrider", costs = 275000, description = {}, model = "sabregt2"},
+				-- {name = "Slamvan Lowrider", costs = 275000, description = {}, model = "slamvan3"},
+				-- {name = "Virgo Lowrider", costs = 275000, description = {}, model = "virgo2"},
+				{name = "Michelli GT", costs = 140000, description = {}, model = "michelli"},
+				-- {name = "Fagaloa", costs = 60000, description = {}, model = "fagaloa"},
+				-- {name = "Clique", costs = 275000, description = {}, model = "clique"},
+				
+			}
+		},
+		["super"] = {
+			title = "super",
+			name = "super",
+			buttons = {
+				-- {name = "Adder", costs = 1000000, description = {}, model = "adder"},
+				-- {name = "Banshee 900R", costs = 365000, description = {}, model = "banshee2"},
+				-- {name = "Bullet", costs = 355000, description = {}, model = "bullet"},
+				-- {name = "Cheetah", costs = 650000, description = {}, model = "cheetah"},
+				-- {name = "Entity XF", costs = 1495000, description = {}, model = "entityxf"},
+				-- {name = "ETR1", costs = 2359500, description = {}, model = "sheava"},
+				-- {name = "FMJ", costs = 1750000, description = {}, model = "fmj"},
+				-- {name = "Infernus", costs = 250000, description = {}, model = "infernus"},
+				-- {name = "Osiris", costs = 1550000, description = {}, model = "osiris"},
+				-- {name = "RE-7B", costs = 3475000, description = {}, model = "le7b"},
+				-- {name = "Reaper", costs = 295000, description = {}, model = "reaper"},
+				-- {name = "Sultan RS", costs = 95000, description = {}, model = "sultanrs"},
+				-- {name = "T20", costs = 2200000, description = {}, model = "t20"},
+				-- {name = "Turismo R", costs = 2000000, description = {}, model = "turismor"},
+				-- {name = "Tyrus", costs = 2550000, description = {}, model = "tyrus"},
+				-- {name = "Vacca", costs = 150000, description = {}, model = "vacca"},
+				-- {name = "Voltic", costs = 69000, description = {}, model = "voltic"},
+				-- {name = "X80 Proto", costs = 3300000, description = {}, model = "prototipo"},
+				-- {name = "Zentorno", costs = 725000, description = {}, model = "zentorno"},
+				-- {name = "Cyclone", costs = 960000, description = {}, model = "cyclone"}, -- smugglers run , handling done
+				-- {name = "Visione", costs = 895000, description = {}, model = "visione"}, -- smugglers run , handling done
+				-- {name = "Autarch", costs = 2800000, description = {}, model = "autarch"}, -- doomsday Heist , handling done
+				-- {name = "SC1", costs = 1050000, description = {}, model = "sc1"}, -- doomsday Heist , handling done
+
+				-- GTAWiseGuy
+				{name = "Turismo Classic", costs = 450000, description = {}, model = "turismo2"},
+				{name = "WCR Patriot Stretch", costs = 150000, description = {}, model = "patriot2"},
+				{name = "Scuffvan Lowrider", costs = 70000, description = {}, model = "minivan2"},
+
+			}
+		},
+		["muscle"] = {
+			title = "muscle",
+			name = "muscle",
+			buttons = {
+				{name = "Blade", costs = 20000, description = {}, model = "blade"},
+				{name = "Buccaneer", costs = 22000, description = {}, model = "buccaneer"},
+				{name = "Chino", costs = 25000, description = {}, model = "chino"},
+				{name = "Coquette BlackFin", costs = 99500, description = {}, model = "coquette3"},
+				{name = "Dominator", costs = 35000, description = {}, model = "dominator"},
+				{name = "Dukes", costs = 72000, description = {}, model = "dukes"},
+				{name = "Gauntlet", costs = 39000, description = {}, model = "gauntlet"},
+				{name = "Hotknife", costs = 69000, description = {}, model = "hotknife"},
+				{name = "Faction", costs = 36000, description = {}, model = "faction"},
+				{name = "Faction 2", costs = 42000, description = {}, model = "faction2"},
+				{name = "Faction 3", costs = 42000, description = {}, model = "faction3"},
+				{name = "Nightshade", costs = 85000, description = {}, model = "nightshade"},
+				{name = "Picador", costs = 9000, description = {}, model = "picador"},
+				{name = "Sabre Turbo", costs = 35000, description = {}, model = "sabregt"},
+				{name = "Tampa", costs = 35000, description = {}, model = "tampa"},
+				{name = "Virgo", costs = 15000, description = {}, model = "virgo"},
+				{name = "Vigero", costs = 41000, description = {}, model = "vigero"},
+				{name = "Hustler", costs = 7000, description = {}, model = "hustler"}, -- doomsday Heist , handling done
+				{name = "Hermes", costs = 127000, description = {}, model = "hermes"}, -- doomsday Heist , handling done
+				{name = "Yosemite", costs = 70000, description = {}, model = "yosemite"}, -- doomsday Heist , handling done
+
+				-- GTA Wise Guy
+				{name = "Phoenix", costs = 35000, description = {}, model = "Phoenix"},
+				{name = "Ruiner", costs = 30000, description = {}, model = "ruiner"},
+				{name = "Dominator GTX", costs = 180000, description = {}, model = "dominator3"},
+				{name = "Vamos", costs = 140000, description = {}, model = "vamos"},
+				-- {name = "Impaler", costs = 60000, description = {}, model = "impaler"},
+				-- {name = "Tulip", costs = 60000, description = {}, model = "tulip"},
+			}
+		},
+		["offroad"] = {
+			title = "off-road",
+			name = "off-road",
+			buttons = {
+				{name = "Bifta", costs = 75000, description = {}, model = "bifta"},
+				{name = "Blazer", costs = 8000, description = {}, model = "blazer"},
+				{name = "Brawler", costs = 71500, description = {}, model = "brawler"},
+				{name = "Bubsta 6x6", costs = 159000, description = {}, model = "dubsta3"},
+				{name = "Dune Buggy", costs = 5000, description = {}, model = "dune"},
+				{name = "Rebel", costs = 22000, description = {}, model = "rebel2"},
+				{name = "Sandking", costs = 38000, description = {}, model = "sandking"},
+				{name = "Trophy Truck", costs = 210000, description = {}, model = "trophytruck"},
+				{name = "Kamacho", costs = 280000, description = {}, model = "kamacho"}, -- doomsday Heist , handling done
+				{name = "Riata", costs = 190000, description = {}, model = "riata"}, -- doomsday Heist , handling done
+				
+				--GTA Wise Guy
+				{name = "Lifted Mesa", costs = 90000, description = {}, model = "mesa3"},
+				{name = "Lego Car", costs = 40000, description = {}, model = "kalahari"},
+				{name = "Street Blazer", costs = 35000, description = {}, model = "blazer4"},
+			}
+		},
+		["suvs"] = {
+			title = "suvs",
+			name = "suvs",
+			buttons = {
+				{name = "Baller", costs = 60000, description = {}, model = "baller"},
+				{name = "Cavalcade", costs = 20000, description = {}, model = "cavalcade"},
+				{name = "Granger", costs = 55000, description = {}, model = "granger"},
+				{name = "Huntley S", costs = 195000, description = {}, model = "huntley"},
+				{name = "Landstalker", costs = 38000, description = {}, model = "landstalker"},
+				{name = "Radius", costs = 22000, description = {}, model = "radi"},
+				{name = "Rocoto", costs = 85000, description = {}, model = "rocoto"},
+				{name = "Seminole", costs = 10000, description = {}, model = "seminole"},
+				{name = "XLS", costs = 90000, description = {}, model = "xls"},
+
+				--GTA Wise Guy
+				{name = "Mesa", costs = 60000, description = {}, model = "Mesa"},
+				{name = "Baller LE", costs = 210000, description = {}, model = "baller3"},
+			}
+		},
+		["vans"] = {
+			title = "vans",
+			name = "vans",
+			buttons = {
+				{name = "Bison", costs = 30000, description = {}, model = "bison"},
+				{name = "Bobcat XL", costs = 15000, description = {}, model = "bobcatxl"},
+				{name = "Gang Burrito", costs = 15000, description = {}, model = "gburrito"},
+				{name = "Journey", costs = 5000, description = {}, model = "journey"},
+				{name = "Minivan", costs = 3000, description = {}, model = "minivan"},
+				{name = "Paradise", costs = 5000, description = {}, model = "paradise"},
+				{name = "Surfer", costs = 5000, description = {}, model = "surfer"},
+				{name = "Youga", costs = 6000, description = {}, model = "youga"},
+			}
+		},
+		["sedans"] = {
+			title = "sedans",
+			name = "sedans",
+			buttons = {
+				{name = "Emperor", costs = 2000, description = {}, model = "emperor2"},
+				{name = "Tornado", costs = 2000, description = {}, model = "tornado3"},
+				{name = "Tornado +", costs = 2900, description = {}, model = "tornado6"},
+				{name = "Bodhi", costs = 3000, description = {}, model = "bodhi2"},
+				{name = "Youga", costs = 5000, description = {}, model = "youga2"},
+				{name = "Rumpo", costs = 16000, description = {}, model = "rumpo3"},			
+				{name = "Asea", costs = 8000, description = {}, model = "asea"},
+				{name = "Asterope", costs = 10000, description = {}, model = "asterope"},
+				{name = "Fugitive", costs = 28000, description = {}, model = "fugitive"},
+				{name = "Glendale", costs = 8000, description = {}, model = "glendale"},
+				{name = "Ingot", costs = 9000, description = {}, model = "ingot"},
+				{name = "Intruder", costs = 25000, description = {}, model = "intruder"},
+				{name = "Premier", costs = 10000, description = {}, model = "premier"},
+				{name = "Primo", costs = 9000, description = {}, model = "primo"},
+				{name = "Primo Custom", costs = 9500, description = {}, model = "primo2"},
+				{name = "Regina", costs = 8000, description = {}, model = "regina"},
+				{name = "Schafter", costs = 45000, description = {}, model = "schafter2"},
+				{name = "Stanier", costs = 10000, description = {}, model = "stanier"},
+				{name = "Stratum", costs = 10000, description = {}, model = "stratum"},
+				{name = "Stretch", costs = 30000, description = {}, model = "stretch"},
+				{name = "Super Diamond", costs = 200000, description = {}, model = "superd"},
+				{name = "Surge", costs = 18000, description = {}, model = "surge"},
+				{name = "Warrener", costs = 80000, description = {}, model = "warrener"},
+				{name = "Washington", costs = 15000, description = {}, model = "washington"},
+				-- Gta wise guy
+				{name = "Tailgater", costs = 90000, description = {}, model = "tailgater"},
+				{model = "taxirooster", name = "Rooster Cab Co Taxi", costs = 5000, description = {} },
+				{name = "Cognoscenti 55", costs = 125000, description = {}, model = "cog55"},
+				{name = "Cognoscenti", costs = 150000, description = {}, model = "cognoscenti"},
+
+
+			}
+		},
+		["motorcycles"] = {
+			title = "MOTORCYCLES",
+			name = "motorcycles",
+			buttons = {
+			--	{name = "Ratbike", costs = 4000, description = {}, model = "ratbike"},			
+				{name = "Akuma", costs = 9000, description = {}, model = "AKUMA"},
+				{name = "Bagger", costs = 25000, description = {}, model = "bagger"},
+				{name = "Bati 801", costs = 15000, description = {}, model = "bati"},
+				{name = "Bati 801RR", costs = 15000, description = {}, model = "bati2"},
+			--	{name = "BF400", costs = 95000, description = {}, model = "bf400"},
+				{name = "Carbon RS", costs = 11000, description = {}, model = "carbonrs"},
+			--	{name = "Cliffhanger", costs = 32500, description = {}, model = "cliffhanger"},
+				{name = "Daemon", costs = 25000, description = {}, model = "daemon"},
+				{name = "Double T", costs = 12000, description = {}, model = "double"},
+			--	{name = "Enduro", costs = 48000, description = {}, model = "enduro"},
+				{name = "Faggio", costs = 2000, description = {}, model = "faggio2"},
+			--	{name = "Gargoyle", costs = 70000, description = {}, model = "gargoyle"},
+				{name = "Hakuchou", costs = 32000, description = {}, model = "hakuchou"},
+				{name = "Hexer", costs = 25000, description = {}, model = "hexer"},
+			--	{name = "Innovation", costs = 30000, description = {}, model = "innovation"},
+				{name = "Lectro", costs = 32000, description = {}, model = "lectro"},
+				{name = "Nemesis", costs = 12000, description = {}, model = "nemesis"},
+				{name = "PCJ-600", costs = 9000, description = {}, model = "pcj"},
+				{name = "Ruffian", costs = 9000, description = {}, model = "ruffian"},
+				{name = "Sanchez", costs = 17000, description = {}, model = "sanchez"},
+				{name = "Sovereign", costs = 62000, description = {}, model = "sovereign"},
+			--	{name = "Thrust", costs = 75000, description = {}, model = "thrust"},
+			--	{name = "Shotaro", costs = 189000, description = {}, model = "SHOTARO"},
+			--	{name = "Vindicator", costs = 41000, description = {}, model = "vindicator"},
+			--	{name = "Zombiea", costs = 60000, description = {}, model = "zombiea"},
+			--	{name = "Zombieb", costs = 65000, description = {}, model = "zombieb"},
+			--	{name = "Wolfsbane", costs = 70000, description = {}, model = "wolfsbane"},
+			--	{name = "Nightblade", costs = 90000, description = {}, model = "nightblade"},
+
+			-- gtawiseguy
+				{name = "Faggio Custom", costs = 25000, description = {}, model = "faggio3"},
+				{name = "Cliffhanger", costs = 40000, description = {}, model = "Cliffhanger"},
+				{name = "Daemon Custom", costs = 40000, description = {}, model = "daemon2"},
+				{name = "Faggio", costs = 8000, description = {}, model = "faggio"},
+
 			}
 		},
 		["cycles"] = {
@@ -81,7 +462,7 @@ local vehshopDefault = {
 
 vehshop = vehshopDefault
 local vehshopOwner = {
-	opened = false,
+	opened = true,
 	title = "Vehicle Shop",
 	currentmenu = "main",
 	lastmenu = nil,

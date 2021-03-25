@@ -1,2 +1,2 @@
-start C:\Users\admin\Desktop\Server\NoPixel\run.cmd
+start D:\FiveM\NoPixelServer\run.cmd
 exit

@@ -2,7 +2,7 @@ local noClipEnabled = false
 local noClipCam = nil
 
 local speed = 1.0
-local maxSpeed = 32.0
+local maxSpeed = 64.0
 local minY, maxY = -89.0, 89.0
 
 local inputRotEnabled = false

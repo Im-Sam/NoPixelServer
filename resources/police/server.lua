@@ -1121,3 +1121,16 @@ AddEventHandler("311r", function(args)
 	exports["np-log"]:AddLog("911r Chat", user, char.first_name .. " " .. char.last_name .. ": ".. message, {target = target})
 end)
 --user:getVar("steamid")
+
+--Added 25/03/2021 - DNA Swab fix possibly
+RegisterServerEvent('police:dnaAsk')
+AddEventHandler('police:dnaAsk', function(target)
+    local src = source
+    local user = exports["np-base"]:getModule("Player"):GetUser(src)
+    local player = exports["np-base"]:getModule("Player"):GetUser(target)
+    local character = player:getCurrentCharacter()
+    local playerName = character.first_name .. ' ' .. character.last_name
+
+    TriggerClientEvent('evidence:addDnaSwab', src, playerName)
+    TriggerClientEvent('evidence:swabNotify', target)
+end)

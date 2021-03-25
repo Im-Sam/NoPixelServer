@@ -96,7 +96,7 @@ rootMenuConfig =  {
     },
     {
         id = "animations",
-        displayName = "Gait",
+        displayName = "Walk Animation",
         icon = "#walking",
         enableMenu = function()
             return not isDead
